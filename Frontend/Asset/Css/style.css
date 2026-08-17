@@ -2,3 +2,173 @@
     padding:0;
     margin:0;
 }
+
+body {
+    background-color: var(--secondary);
+}
+
+:root {
+    --primary : #F8ACB9;
+    --secondary : #F2DCDE;
+    --tertiary : #D9717C;
+    --white : #f0f0f0;
+    --black : #000;
+    --light-gray : #C3C3C3;
+}
+
+@font-face {
+    font-family: Baloo;
+    src: url(/Frontend/Asset/Font/baloo.regular.ttf);
+}
+
+@font-face {
+    font-family: Playlist;
+    src: url(/Frontend/Asset/Font/Playlist\ Script.otf);
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 18px;
+}
+
+.logo {
+    margin-inline: 50px;
+}
+
+.logo img {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo';
+    font-size: 24px;
+    color: var(--tertiary);
+    gap: 24px; 
+    text-decoration: none;
+}
+
+.header-links {
+    margin-inline: 50px;
+}
+
+.header-links ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.header-links a {
+    font-family: 'Baloo';
+    font-size: 18px;
+    color: var(--tertiary);
+    text-decoration: none;
+}
+
+
+
+
+
+.bestseller {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.bestseller-title {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bestseller-title p, .bestseller-title span {
+    font-size: 75px;
+    color: var(--tertiary);
+}
+
+.bestseller-title p {
+    font-family: 'Baloo';
+}
+
+.bestseller-title span {
+    font-family: 'Playlist';
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feedback-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-title h2 {
+    font-family: 'Playlist';
+    font-size: 75px;
+    color: var(--white);
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+}
+
+.owner-img {
+    flex: 0 0 auto;
+}
+
+.owner-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.owner-description h1 {
+    font-family: 'Playlist';
+    font-size: 60px;
+    color: var(--tertiary);
+}
+
+.owner-description p {
+    font-family: 'Baloo';
+    font-size: 24px;
+    color: var(--white);
+}
+
+.spotify-playlist {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    margin-left: 25px;
+}
+
+.spotify-playlist iframe {
+    width: 400px;
+    height: 100px;
+}
+

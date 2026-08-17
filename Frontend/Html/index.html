@@ -7,10 +7,10 @@
     
     <link rel="icon" href="../Asset/Images/logo/logo.jpg">
     <link rel="stylesheet" href="../Asset/Css/style.css"/>
+    <script src="../Asset/Js/script.js"></script>
+    <script src="../Asset/Js/autoplay.js"></script>
 </head>
 <body>
-    <script src="../Asset/Js/script.js"></script>
-
     <div id="container">
         <div id="header" class="header">
             <div class="logo">
@@ -21,6 +21,7 @@
             <div class="header-links">
                 <ul>
                     <a href="index.html"><li>Home</li></a>
+                    <a href="menu.html"><li>Menu</li></a>
                 </ul>
             </div>
         </div>
@@ -31,13 +32,18 @@
             </div>
 
             <div class="bestseller">
-                <h2>Cookies</h2>
-                <p></p>
+                <div class="bestseller-img"><img src="../Asset/Images/misc/placeholder.png" alt="MOSTWANTERCOOKIE"></div>
+                <div class="bestseller-title">
+                    <p>The <br><span>Most Wanted</span><br> Cookie</p>
+                </div>
             </div>
 
-            <div class="feedback">
+            <div class="feedback-container">
                 <div class="feedback-title">
                     <h2>Feedback</h2>
+                </div>
+                <div id="feedback" class="feedback">
+                    
                 </div>
             </div>
 
@@ -47,19 +53,52 @@
                 </div>
 
                 <div class="owner-description">
-                    <h2>Meet</h2>
-                    <p></p>
+                    <h1>Meet</h1>
+                    <p>dawdawdawdaw</p>
                 </div>
             </div>
+
+            <div class="menu-preview">
+                
+            </div>
+
         </div>
 
         <div id="spotify" class="spotify-playlist">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ahynoK1xfrwTLpoNzEPsa?utm_source=generator&si=8e34de5d3d5e4297" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe 
+                id="spotify-iframe"
+                data-testid="embed-iframe" 
+                style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/7ahynoK1xfrwTLpoNzEPsa?utm_source=generator&si=8e34de5d3d5e4297" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
         </div>
+        
     </div>
 
     <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../Asset/Images/logo/logo.jpg" alt="florivybakes_logo"/>
+                <h3>Florivy Bakes</h3>
+            </div>
 
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="mailto:hello@florivybakes.com">Email</a>
+            </div>
+        </div>
+
+        <p class="footer-copyright">&copy; 2026 Florivy Bakes. All rights reserved.</p>
     </footer>
 </body>
 </html>
