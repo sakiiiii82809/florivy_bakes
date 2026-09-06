@@ -1,0 +1,111 @@
+@import url("style.css");
+@import url("font.css");
+
+.menu {
+    display: flex;
+    padding: 0 250px;
+}
+
+.sidebar {
+    padding: 50px;
+    flex: 0 0 180px;
+}
+
+.sidebar-title h2 {
+    font-family: "Baloo";
+    color: var(--tertiary);
+}
+
+.category-nav label {
+    font-family: "Baloo";
+    color: var(--secondary);
+}
+
+.category-nav input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid var(--tertiary);
+    border-radius: 4px;
+    background-color: var(--white);
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    position: relative;
+    transition: 0.2s ease;
+}
+
+.category-nav input[type="checkbox"]:checked {
+    background-color: var(--primary);
+    border-color: var(--tertiary);
+}
+
+.category-nav input[type="checkbox"]:checked::after {
+    content: "";
+
+    position: absolute;
+    left: 4px;
+    top: 1px;
+
+    width: 5px;
+    height: 9px;
+
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+
+    transform: rotate(45deg);
+}
+
+.product-container {
+    flex: 1;
+    padding: 50px;
+}
+
+.product-section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.product-section h2 {
+    font-family: "Baloo";
+    color: var(--tertiary);
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 50px;
+}
+
+.product-card {
+    width: 300px;
+    background-color: var(--secondary);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product-card img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-family: "Baloo";
+    color: var(--tertiary);
+}
+
+.product-info p {
+    font-family: "Baloo";
+    color: var(--black);
+}
