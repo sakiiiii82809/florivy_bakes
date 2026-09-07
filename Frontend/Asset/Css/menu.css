@@ -17,6 +17,7 @@
 }
 
 .category-nav label {
+    margin: 3px;
     font-family: "Baloo";
     color: var(--secondary);
 }
@@ -24,17 +25,13 @@
 .category-nav input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
-
     width: 18px;
     height: 18px;
-
     border: 2px solid var(--tertiary);
     border-radius: 4px;
     background-color: var(--white);
-
     cursor: pointer;
     vertical-align: middle;
-
     position: relative;
     transition: 0.2s ease;
 }
@@ -46,18 +43,20 @@
 
 .category-nav input[type="checkbox"]:checked::after {
     content: "";
-
     position: absolute;
     left: 4px;
     top: 1px;
-
     width: 5px;
     height: 9px;
-
     border: solid var(--white);
     border-width: 0 2px 2px 0;
-
     transform: rotate(45deg);
+}
+
+.category-nav hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 2px solid var(--tertiary);
 }
 
 .product-container {
@@ -96,16 +95,54 @@
     display: block;
 }
 
-.product-info {
-    padding: 15px;
+.product-card {
+    position: relative;
+    overflow: hidden;
 }
 
-.product-info h3 {
+.product-card::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.025);
+    transition: opacity 0.5s ease, transform 0.7s ease;
+}
+
+#og-crinkles4::before {
+    background-image: url("../Images/products/original_crinkle_4pcs_2.jpg");
+}
+
+#creamcheese::before {
+    background-image: url("../Images/products/creamcheese_2.jpg");
+}
+
+#og-crinkles4:hover::before,  #creamcheese:hover::before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.product-info {
+    position: relative;
+    padding: 15px;
+    z-index: 5;
+}
+
+.product-info h3, .product-info p {
     font-family: "Baloo";
     color: var(--tertiary);
 }
 
-.product-info p {
-    font-family: "Baloo";
-    color: var(--black);
-}

@@ -1,0 +1,4 @@
+<FilesMatch "\.(json|jsonl)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

@@ -25,8 +25,9 @@
             <nav class="header-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
                     <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html#feedback">Feedback</a></li>
                 </ul>
             </nav>
         </header>
@@ -41,8 +42,8 @@
                         A bake shop offering delicious cookies and soft, chocolatey crinkles,
                         Florivy Bakes is perfect for satisfying your sweet cravings.
                     </p>
-                    <div class="available-btn">
-                        <button id="available" type="button">Product Available | &rarr;</button>
+                    <div class="showcase">
+                        <a href="menu.html" class="showcase-btn">Showcase | &rarr;</a>
                     </div>
                 </div>
             </section>
@@ -56,11 +57,55 @@
                 </div>
             </section>
 
-            <section class="feedback-container fade-in">
-                <div class="feedback-title">
-                    <h2>Feedback</h2>
+            <section class="review-container">
+                <div class="reviews-form-container">
+                <h2>Customer Feedback</h2>
+                    <div class="reviews-grid">
+                        <div class="reviews-list" id="reviewsList">
+                            <h3>What Our Customers Say</h3>
+                            <p>Loading feedbacks...</p>
+                        </div>
+                        <div class="review-form">
+                            <h3>Leave Feedback</h3>
+                            <div id="reviewMessage" class="message"></div>
+                            <form id="submitReviewForm">
+                                <div class="form-group">
+                                    <label for="reviewerName">Your Name:</label>
+                                    <input type="text" id="reviewerName" name="reviewerName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reviewerEmail">Your Email:</label>
+                                    <input type="email" id="reviewerEmail" name="reviewerEmail">
+                                </div>
+                                <!--
+                                <div class="form-group rating-group">
+                                    <label>Your Rating:</label>
+                                    <div class="stars" id="starRating">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                        <input type="hidden" id="reviewRating" name="reviewRating" value="0" required>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="form-group">
+                                    <label for="reviewComment">Your Comments:</label>
+                                    <textarea id="reviewComment" name="reviewComment" required></textarea>
+                                </div>
+                                <button type="submit" id="submitBtn">Submit Feedback</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div id="feedback" class="feedback">
+            </section>
+
+
+
+
+            <!--
+                <div class="feedback">
                     <div class="user">
                         <div class="profile">
                             <img src="../Asset/Images/misc/default_profile.png" alt="Default profile picture">
@@ -74,8 +119,7 @@
                         <p>Customer reviews will appear here.</p>
                     </div>
                 </div>
-            </section>
-
+                -->
             <section id="about" class="owner fade-in">
                 <div class="owner-img">
                     <img src="../Asset/Images/misc/owner.png" alt="Florivy Bakes owners">
@@ -107,8 +151,6 @@
                 data-testid="embed-iframe"
                 style="border-radius:12px"
                 src="https://open.spotify.com/embed/playlist/7ahynoK1xfrwTLpoNzEPsa?utm_source=generator&si=8e34de5d3d5e4297"
-                width="400"
-                height="100"
                 frameborder="0"
                 allowfullscreen
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -118,7 +160,7 @@
         </div>
 
         <div class="backtotop-btn fade-in">
-            <button id="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+            <button id="back-to-top" type="button" aria-label="Back to top">Back To Top &uarr;</button>
         </div>
 
     </div>
@@ -132,7 +174,9 @@
             <nav class="footer-links">
                 <h3>Navigation</h3>
                 <a href="index.html">Home</a>
+                <a href="index.html#about">About Us</a>
                 <a href="menu.html">Menu</a>
+                <a href="index.html#about">About Us</a>
             </nav>
 
             <div class="footer-socials">
