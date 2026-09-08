@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const backToTop = document.querySelector(".backtotop-btn");
 const backToTopButton = document.getElementById("back-to-top");
 
@@ -16,66 +15,123 @@ backToTopButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
-=======
-// Frontpage feedback form
-const form= document.getElementById("feedbackForm");
-const commentInput= document.getElementById("comment");
-const commentPost= document.querySelector(".comments");
 
-async function loadComments() {
+// Feedback Form
+const reviewList= document.getElementById("reviewsList");
+const reviewForm= document.getElementById('submitReviewForm')
+const reviewMessage= document.getElementById("reviewMessage");
+const reviewerName= document.getElementById("reviewerName");
+const reviewerEmail= document.getElementById("reviewerEmail");
+const reviewComment= document.getElementById("reviewComment");
+const submitButton= document.getElementById("submitBtn");
+
+
+async function loadReviews() {
+    if (!reviewList) {
+        console.error("review was not found");
+        return;
+    }
     try {
-        const response= await fetch("api/comments");
+        const response= await fetch("/api/comments");
 
         if(!response.ok) {
-            throw new Error("Failed to load comments");
+            throw new Error("Failed to load reviews");
         }
 
-        const comments = await response.json();
+        const reviews = await response.json();
 
-        commentPost.innerHTML= "";
+        reviewList.replaceChildren();
+        reviewList.innerHTML= `<h3>What Our Customer Say</h3>`;
 
-        if (comments.length == 0) {
-            commentPost.innerHTML= "<p>Customer reviews will appear here.</p>";
+        if (!Array.isArray(reviews) || reviews.length === 0) {
+             reviewList.innerHTML += `
+                <p>Write your review here</p>
+            `;
             return;
         }
         
-        comments.forEach(item => {
-            const p= document.createElement("p");
-                p.textContent = item.comment;
-                commentPost.appendChild(p);
+        reviews.forEach(review => {
+            const reviewItem = document.createElement("div");
+            reviewItem.classList.add("review-item");
+
+            const name = document.createElement("h4");
+            name.textContent = review.name || "Anonymous";
+
+            const comment = document.createElement("p");
+            comment.textContent = review.comment || "";
+
+            reviewItem.appendChild(name);
+            reviewItem.appendChild(comment);
+
+            reviewList.appendChild(reviewItem);
         });
+
     } catch(error) {
-        console.error("Error loading comments", error);
+        console.error("Error loading comments:", error);
+
+        reviewList.innerHTML = `
+            <h3>What Our Customers Say</h3>
+            <p>Failed to load</p>
+        `;
     }
 }
 
-form.addEventListener("submit", async(event) => {
+if(reviewForm) {
+    reviewForm.addEventListener("submit", async(event) => {
     event.preventDefault();
-    const comment= commentInput.value.trim();
-    if (!comment) return;
+    const name= reviewerName.value.trim();
+    const email= reviewerEmail.value.trim();
+    const comment= reviewComment.value.trim();
+
+    if (!name || !comment) {
+        reviewMessage.textContent= "Enter your name here";
+        reviewMessage.className= "error message";
+        return;
+    }
 
     try {
-        const response= await fetch("api/comments",{ 
+        submitButton.disabled= true;
+        submitButton.textContent= "Submitting...";
+
+        const response= await fetch("/api/comments",{ 
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
+            name: name,
+            email: email,
             comment: comment
         })
         });
         
+        const result = await response.json();
+
         if(!response.ok) {
-            throw new Error("Couldn't save comment");
+            throw new Error(result.error ||"Couldn't save comment");
         }
 
-        commentInput.value= "";
+        reviewMessage.textContent= "We appreciate your review!"; 
+        reviewMessage.className= "successfully uploaded";
+        
+        reviewerName.value= "";
+        reviewerEmail.value= "";
+        reviewComment.value= "";
 
-        loadComments();
+        await loadReviews();
+
     } catch(error) {
         console.error("Couldn't post comment", error);
+
+        reviewMessage.textContent= error.message || "Something went wrong";
+
+        reviewMessage.className = "error message";
+    } finally {
+        submitButton.disabled= false;
+        submitButton.textContent= "Submit your thoughts";
     }
 });
+}
 
-loadComments();
->>>>>>> 1d1b788aa8d252d4afbc6d90345d782b060284b4
+loadReviews();
+
