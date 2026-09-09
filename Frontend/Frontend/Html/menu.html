@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florivy Bakes</title>
+
+    <link rel="icon" href="../Asset/Images/logo/logo.jpg">
+    <link rel="stylesheet" href="../Asset/Css/style.css"/>
+    <script src="../Asset/Js/script.js" defer></script>
+    <script src="../Asset/Js/animation.js" defer></script>
+    <script src="../Asset/Js/menu.js" defer></script>
+</head>
+<body>
+    <div id="menu-container" class="menu-container">
+        <header id="header" class="header fade-in">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../Asset/Images/logo/logo.jpg" alt="Florivy Bakes logo">
+                    <h3>Florivy Bakes</h3>
+                </a>
+            </div>
+
+            <nav class="header-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+       
+
+        <div class="menu">
+            <aside class="sidebar fade-in">
+                <div class="sidebar-title">
+                    <h2>Showcase</h2>
+                </div>
+
+                <nav class="category-nav">
+                    <input type="checkbox" id="all" name="category" value="all" checked>
+                    <label for="all">All</label><br>
+
+                    <input type="checkbox" id="crinkles" name="category" value="crinkles">
+                    <label for="crinkles">Crinkles</label><br>
+
+                <input type="checkbox" id="cookies" name="category" value="cookies">
+                    <label for="cookies">Cookies</label><br>
+
+                    <hr>
+
+                    <input type="checkbox" id="bestseller" name="category" value="bestseller">
+                    <label for="bestseller">Best Seller</label><br>
+                </nav>
+            </aside>
+
+
+            <div class="product-container">
+                <div class="product-section fade-in" id="crinkles-products">
+                    <h2>Crinkles</h2>
+                    <div class="product-grid">
+
+                        <div class="product-card" data-category="crinkles">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Chocolate Crinkle">
+                            <div class="product-info">
+                                <h3>Original Crinkle</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="crinkles">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Red Velvet Crinkle">
+                            <div class="product-info">
+                                <h3>Creamcheese Crinkle</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="crinkles">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Matcha Crinkle">
+                            <div class="product-info">
+                                <h3>Lava Chocolate Crinkle</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-section fade-in" id="cookies-products" data-category="cookies">
+                    <h2>Cookies</h2>
+                    <div class="product-grid">
+                        <div class="product-card" data-category="cookies">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Chocolate Chip Cookie">
+                            <div id="cookies" class="product-info">
+                                <h3>Biscoff Cookie</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="cookies bestseller">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Red Velvet Cookie">
+                            <div id="cookies" class="product-info">
+                                <h3>Cookies N Cream Cookie</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="cookies bestseller">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Matcha Cookie">
+                            <div id="cookies" class="product-info">
+                                <h3>Smores Cookie</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="cookies">
+                            <img src="../Asset/Images/misc/placeholder.png" alt="Matcha Cookie">
+                            <div id="cookies" class="product-info">
+                                <h3>Chocolate Chip Cookie</h3>
+                                <p>₱67</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="spotify" class="spotify-playlist fade-in">
+            <iframe 
+                id="spotify-iframe"
+                data-testid="embed-iframe" 
+                style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/7ahynoK1xfrwTLpoNzEPsa?utm_source=generator&si=8e34de5d3d5e4297" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <footer id="footer" class="fade-in">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../Asset/Images/logo/logo.jpg" alt="florivybakes_logo"/>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                </div>
+
+                <div class="footer-socials">
+                    <h3>Socials</h3>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="mailto:hello@florivybakes.com">Email</a>
+                </div>
+            </div>
+        
+        <div class="copyright fade-in">
+            <p class="footer-copyright">&copy; 2026 Florivy Bakes. All rights reserved.</p>
+        </div>
+        </footer>
+    </div>
+</body>
+</html>

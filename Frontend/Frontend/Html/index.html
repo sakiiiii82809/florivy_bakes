@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florivy Bakes</title>
+
+    <link rel="icon" href="../Asset/Images/logo/logo.jpg">
+    <link rel="stylesheet" href="../Asset/Css/style.css">
+    <script src="../Asset/Js/script.js" defer></script>
+    <script src="../Asset/Js/animation.js" defer></script>
+    <script src="../Asset/Js/menu.js" defer></script>
+</head>
+<body>
+    <div id="main-container" class="main-container">
+
+        <header id="header" class="header fade-in">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../Asset/Images/logo/logo.jpg" alt="Florivy Bakes logo">
+                    <h3>Florivy Bakes</h3>
+                </a>
+            </div>
+
+            <nav class="header-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="main fade-in">
+                <img src="../Asset/Images/misc/placeholder.png" alt="Assorted Florivy Bakes pastries">
+
+                <div class="about-shop">
+                    <h1>We're <span>Florivy Bakes</span></h1>
+                    <p>
+                        A bake shop offering delicious cookies and soft, chocolatey crinkles,
+                        Florivy Bakes is perfect for satisfying your sweet cravings.
+                    </p>
+                    <div class="available-btn">
+                        <button id="available" type="button">Product Available | &rarr;</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bestseller fade-in">
+                <div class="bestseller-img">
+                    <img src="../Asset/Images/misc/placeholder.png" alt="Our best-selling cookie">
+                </div>
+                <div class="bestseller-title">
+                    <p>The <br><span>Crowd Favorite</span><br> Cookie</p>
+                </div>
+            </section>
+
+            <section class="feedback-container fade-in">
+                <div class="feedback-title">
+                    <h2>Feedback</h2>
+                </div>
+                <div id="feedback" class="feedback">
+                    <div class="user">
+                        <div class="profile">
+                            <img src="../Asset/Images/misc/default_profile.png" alt="Default profile picture">
+                        </div>
+                        <div class="username">
+                            <p>User1234567890</p>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <p>Customer reviews will appear here.</p>
+                    </div>
+
+                    <form id="feedbackForm">
+                        <textarea id= "comment" placeholder="Write your comment here" required></textarea>
+                        <button type="submit">Share</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="about" class="owner fade-in">
+                <div class="owner-img">
+                    <img src="../Asset/Images/misc/owner.png" alt="Florivy Bakes owners">
+                </div>
+
+                <div class="story">
+                    <div class="story-title">
+                        <h2>Our Story</h2>
+                    </div>
+                    <div class="story-description">
+                        <p>
+                            Our business started when one day, two business partners were suddenly
+                            craving pastries and sweets. Then, a thought crosses their minds:
+                            "What if we sold pastries and sweets with reasonable prices?"
+                            Hence, Florivy Bakes is born! We make and sell an array of sweets—from
+                            cookies to crinkles with a multiple burst of flavors. Enjoy our decadent
+                            and heartwarming baked goods because Florivy bakes for the smiles on your faces!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="showcase fade-in"></section>
+        </main>
+
+        <div id="spotify" class="spotify-playlist fade-in">
+            <iframe
+                id="spotify-iframe"
+                data-testid="embed-iframe"
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/7ahynoK1xfrwTLpoNzEPsa?utm_source=generator&si=8e34de5d3d5e4297"
+                width="400"
+                height="100"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Florivy Bakes Spotify playlist">
+            </iframe>
+        </div>
+
+        <div class="backtotop-btn fade-in">
+            <button id="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+        </div>
+
+    </div>
+
+    <footer id="footer" class="fade-in">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../Asset/Images/logo/logo.jpg" alt="Florivy Bakes logo">
+            </div>
+
+            <nav class="footer-links">
+                <h3>Navigation</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+            </nav>
+
+            <div class="footer-socials">
+                <h3>Socials</h3>
+                <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="mailto:">Email</a>
+            </div>
+        </div>
+
+        <div class="copyright fade-in">
+            <p class="footer-copyright">&copy; 2026 Florivy Bakes. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

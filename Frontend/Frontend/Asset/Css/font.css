@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Baloo;
+    src: url(/Frontend/Asset/Font/baloo.regular.ttf);
+}
+
+@font-face {
+    font-family: Playlist;
+    src: url(/Frontend/Asset/Font/Playlist\ Script.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/Frontend/Asset/Font/Roboto-Black.ttf);
+}
